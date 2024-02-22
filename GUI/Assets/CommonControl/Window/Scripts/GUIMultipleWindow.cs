@@ -11,19 +11,17 @@ public class GUIMultipleWindow : MonoBehaviour
     {
         // 绘制多个窗口
         GUI.color = Color.red;
-        clientRect1 = GUI.Window(0, clientRect1, DoMyWindow, "Red Window");
+        clientRect1 = GUI.Window(0, clientRect1, DoWindow, "Red Window");
         GUI.color = Color.green;
-        clientRect2 = GUI.Window(1, clientRect2, DoMyWindow, "Green Window");
+        clientRect2 = GUI.Window(1, clientRect2, DoWindow, "Green Window");
     }
 
-    private void DoMyWindow(int windowID)
+    private void DoWindow(int windowID)
     {
         // 创建一个按钮
         if (GUI.Button(new Rect(10f, 25f, 100f, 20f), "Hello World"))
         {
             print("Got a click in window " + windowID);
         }
-        // 在自定义的矩形区域绘制一个可拖动窗口
-        GUI.DragWindow(new Rect(0.0f, 0.0f, 10000, 10000));
     }
 }
