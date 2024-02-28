@@ -22,7 +22,9 @@ public class MusicButton : MonoBehaviour
         {
             deleteListener(this);
         });
-        GetComponent<RectTransform>().SetParent(parentRectTransform);
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        rectTransform.SetParent(parentRectTransform);
+        rectTransform.localScale = Vector3.one;
         SetEdit(isEdit);
     }
 
