@@ -34,9 +34,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Red
+  - Green
+  - Blue
   m_SortingLayers:
   - name: Default
     uniqueID: 0
